@@ -1,4 +1,5 @@
 import { Stack } from "expo-router";
+import { View } from "react-native";
 
 export default function RootLayout() {
   return(
@@ -12,9 +13,26 @@ export default function RootLayout() {
         //headerBackVis'ible: false,
       }}
     >
-      <Stack.Screen name="home/index" options={{  title: 'Vestify' }} />
-      <Stack.Screen name="camera/index" options={{  title: 'Camera' }} />
-      <Stack.Screen name="permissions/index" options={{  presentation: 'modal', headerTitle: 'Permisos' }} />
+      <Stack.Screen 
+        name="home/index" 
+        options={{ 
+          title: 'Vestify',
+        }} 
+      />
+      <Stack.Screen 
+        name="camera/index" 
+        options={{ 
+          headerShown: false
+        }} 
+      />
+      <Stack.Screen 
+        name="permissions/index" 
+        options={{ 
+          presentation: 'modal', 
+          headerTitle: 'Permisos',
+          headerShown: false
+        }} 
+      />
     </Stack>
   )
 }
